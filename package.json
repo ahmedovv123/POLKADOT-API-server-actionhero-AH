@@ -1,0 +1,52 @@
+{
+  "author": "YOU <YOU@example.com>",
+  "name": "my_actionhero_project",
+  "description": "my actionhero project",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "@polkadot/api": "^6.3.1",
+    "@types/validator": "^13.6.3",
+    "actionhero": "27.1.5",
+    "ah-sequelize-plugin": "^3.2.0",
+    "dotenv": "^10.0.0",
+    "ioredis": "latest",
+    "ioredis-mock": "latest",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.7.0",
+    "sequelize-typescript": "^2.1.1",
+    "winston": "latest",
+    "ws": "latest"
+  },
+  "devDependencies": {
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "jest": "latest",
+    "prettier": "latest",
+    "ts-jest": "latest",
+    "ts-node-dev": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "dev": "ts-node-dev --no-deps --transpile-only ./src/server",
+    "debug": "tsc && ts-node-dev --transpile-only --no-deps --inspect -- ./src/server ",
+    "start": "node ./dist/server.js",
+    "actionhero": "actionhero",
+    "test": "jest",
+    "pretest": "npm run build && npm run lint",
+    "build": "tsc --sourceMap false --declaration",
+    "lint": "prettier --check src/*/** __tests__/*/**",
+    "pretty": "prettier --write src/*/** __tests__/*/**"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    }
+  }
+}
