@@ -12,7 +12,11 @@ export const DEFAULT = {
         { path: '/accounts/count', action: 'getAccountsCount'},
         { path: '/account/transactions/count/:accountId', action: 'getAccountTransactionsCount'},
         { path: '/account/transactions/:accountId', action: 'getAccountTransactions'},
-        { path: '/account/balance/:accountId', action: 'getAccountBalance'}
+        { path: '/account/balance/:accountId', action: 'getAccountBalance'},
+        { path: '/transactions/count/', action: 'getTransactionsCount'},
+        { path: '/transactions/block/:blockHash', action: 'getTransactionsFromBlock'},
+        { path: '/transactions/hash/:transactionHash', action: 'getTransactionByHash'},
+        { path: '/transactions/:x/:n', action: 'getXtransactionsAfterNth'}
       ],
 
       /* ---------------------

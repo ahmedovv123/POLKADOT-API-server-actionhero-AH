@@ -11,10 +11,6 @@ const connectDb = dbConnection.getDbConnection().then((db) => {
     return db;
 });
 
-export async function getLastBlock(){
-    return connectApi.then(api => api.rpc.chain.getBlock());
-}
-
 export async function getAccountsCount() {
     return await connectDb.then(async db => { 
         const result = await db.query(`SELECT COUNT(DISTINCT recipient)+COUNT(DISTINCT sender) AS count FROM transactions`);
