@@ -8,7 +8,11 @@ export const DEFAULT = {
         { path: '/blocks', action: 'getLastBlock'},
         { path: '/blocks/num/:blockNumber', action: 'getBlockHashByNumber'},
         { path: '/blocks/hash/:blockHash', action: 'getBlockByHash'},
-        { path: '/blocks/:x/:n', action: 'getXBlocksAfterN'}
+        { path: '/blocks/:x/:n', action: 'getXBlocksAfterN'},
+        { path: '/accounts/count', action: 'getAccountsCount'},
+        { path: '/account/transactions/count/:accountId', action: 'getAccountTransactionsCount'},
+        { path: '/account/transactions/:accountId', action: 'getAccountTransactions'},
+        { path: '/account/balance/:accountId', action: 'getAccountBalance'}
       ],
 
       /* ---------------------

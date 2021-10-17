@@ -25,11 +25,11 @@ export const DEFAULT = {
     */
 
     return {
-      'ah-sequelize-plugin': {
-        path: path.join(process.cwd(), 'node_modules', 'ah-sequelize-plugin'),
-      },
       '@polkadot/api': {
         path: path.join(process.cwd(), 'node_modules', '@polkadot/api')
+      },
+      'pg': {
+        path: path.join(process.cwd(), 'node_modules', 'pg')
       }
     };
   },
