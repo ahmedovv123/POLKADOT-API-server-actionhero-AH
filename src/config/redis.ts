@@ -1,4 +1,5 @@
 import { URL } from "url";
+require('dotenv').config();
 
 /**
  * This is the standard redis config for Actionhero.
