@@ -10,9 +10,9 @@ const getDbConnection = async () => {
     if(client) return client;
 
     const newClient = new Client({
-        host: process.env.DB_HOST || "node1.blackseachain.com",
+        host: process.env.DB_HOST || "localhost",
         user: process.env.DB_USER || "postgres",
-        port: process.env.DB_PORT || "8080",
+        port: process.env.DB_PORT || "5432",
         password: process.env.DB_PASS || "root",
         database: process.env.DB_DATABASE || "polkadot_explorer",
     });

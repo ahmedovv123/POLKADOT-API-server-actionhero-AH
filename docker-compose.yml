@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+  actionhero-server:
+    image: ahmedovv123/polkadot-explorer-server-actionhero
+    container_name: actionhero-server-container
+    ports:
+    - 8080:8080
+    depends_on:
+      db_redis:
+        condition: PONG
+  
+  db_redis:
+    image: redis
+    container_name: redis_container
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  default:
+    external: true
+    name: polkadot-api-server_default

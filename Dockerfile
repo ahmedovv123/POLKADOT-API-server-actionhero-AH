@@ -3,4 +3,4 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install 
 ADD . . 
-CMD 'node' 'server.js'
+CMD 'npm' 'run' 'dev'
