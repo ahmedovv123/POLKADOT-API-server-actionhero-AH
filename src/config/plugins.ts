@@ -1,4 +1,4 @@
-import * as path from 'path';
+import * as path from "path";
 
 export const DEFAULT = {
   plugins: (config) => {
@@ -25,12 +25,12 @@ export const DEFAULT = {
     */
 
     return {
-      '@polkadot/api': {
-        path: path.join(process.cwd(), 'node_modules', '@polkadot/api')
+      "@polkadot/api": {
+        path: path.join(process.cwd(), "node_modules", "@polkadot/api"),
       },
-      'pg': {
-        path: path.join(process.cwd(), 'node_modules', 'pg')
-      }
+      pg: {
+        path: path.join(process.cwd(), "node_modules", "pg"),
+      },
     };
   },
 };
